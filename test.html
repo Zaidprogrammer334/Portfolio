@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نبذة عني | زيد خليفة</title>
+    <style>
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background-color: #5470d4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .content-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .text-content {
+            flex: 1;
+            text-align: right;
+            padding: 0 20px;
+        }
+        
+        .image-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 3px solid #f1f1f1;
+            margin-left: 40px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        
+        .title {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #5470d4, transparent);
+            margin: 25px 0;
+        }
+        
+        .bio {
+            font-size: 1.1em;
+            color: #34495e;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .experience-section {
+            background-color: #5470d4;
+            padding: 80px 0;
+            width: 100%;
+        }
+
+        .experience-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #ffffff;
+            margin: 15px auto;
+        }
+
+        .experience-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .experience-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: right;
+        }
+
+        .experience-text h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .experience-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .skills {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .skills h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 20px 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            background: white;
+        }
+
+        .skill-item i {
+            font-size: 40px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover i {
+            transform: scale(1.1);
+        }
+
+        .skill-item p {
+            margin: 0;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.9rem;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column-reverse;
+                padding: 30px;
+            }
+            
+            .image-container {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
+                margin-left: 0;
+            }
+            
+            .text-content {
+                padding: 0;
+            }
+
+            .experience-content {
+                flex-direction: column;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h1>زيد خليفة</h1>
+                <div class="title">مبرمج | منتج فيديوهات | صانع محتوى</div>
+                
+                <div class="divider"></div>
+                
+                <div class="bio">
+                    <p>مبرمج ألعاب ومطور مواقع، أتمتع بخبرة قوية في لغة Python، بالإضافة إلى شغفي بإنتاج الفيديو والمونتاج. أعمل على تطوير مشاريع تفاعلية باستخدام محركات مثل Godot وتقنيات الويب مثل HTML، CSS، JavaScript</p>
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <img src="365_20241012191345.png" alt="زيد خليفة">
+            </div>
+        </div>
+    </div>
+
+    <section class="experience-section hidden">
+        <div class="experience-wrapper">
+            <h2 class="section-title">خبراتي ومهاراتي</h2>
+            <div class="experience-content">
+                <div class="experience-text">
+                    <h3>خبراتي المهنية</h3>
+                    <p>لدي خبرة في مجال برمجة الالعاب والويب منذ أكثر من 3 سنوات، تخصصت في بناء مواقع ويب تفاعلية باستخدام أحدث التقنيات.</p>
+                    <p>قمت بتطوير العديد من المشاريع الشخصية والمهنية التي تعكس مهاراتي في البرمجة وإنتاج المحتوى.</p>
+                </div>
+                <div class="skills">
+                    <h3>المهارات والتقنيات</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="devicon-html5-plain colored"></i>
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-css3-plain colored"></i>
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-python-plain colored"></i>
+                            <p>Python</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-cplusplus-plain colored"></i>
+                            <p>C++</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-godot-plain"></i>
+                            <p>Godot</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-premierepro-plain colored"></i>
+                            <p>Premiere Pro</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-aftereffects-plain colored"></i>
+                            <p>After Effects</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-photoshop-plain colored"></i>
+                            <p>Photoshop</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+        
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
