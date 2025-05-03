@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نبذة عني | زيد خليفة</title>
+    <title>Zaid Khaleefh | Portfolio</title>
     <style>
         body {
             font-family: 'Tajawal', Arial, sans-serif;
@@ -189,6 +189,175 @@
             font-size: 0.9rem;
         }
 
+        /* قسم المشاريع */
+        .projects-section {
+            background-color: white;
+            padding: 80px 0;
+            width: 100%;
+        }
+
+        .projects-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            color: #5470d4;
+            font-size: 0.9rem;
+        }
+
+        .project-link {
+            color: #5470d4;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #3a56c4;
+            text-decoration: underline;
+        }
+
+        /* قسم الشهادات الجديد */
+        .certificates-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+            width: 100%;
+        }
+
+        .certificates-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .certificate-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .certificate-image {
+            height: 280px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f1f1;
+        }
+
+        .certificate-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .certificate-card:hover .certificate-image img {
+            transform: scale(1.03);
+        }
+
+        .certificate-content {
+            padding: 20px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .certificate-title {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .certificate-description {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* تأثيرات التمرير */
         .hidden {
             opacity: 0;
             transform: translateY(50px);
@@ -223,6 +392,16 @@
             
             .skills-grid {
                 grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            }
+            
+            .projects-grid,
+            .certificates-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            
+            .certificate-image {
+                height: 250px;
             }
         }
     </style>
@@ -297,7 +476,192 @@
                             <i class="devicon-photoshop-plain colored"></i>
                             <p>Photoshop</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section hidden">
+        <div class="projects-wrapper">
+            <h2 class="section-title" style="color: #2c3e50;">ابرز مشاريعي</h2>
+            <div class="projects-grid">
+                <!-- المشروع 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="ProjectLogo.png" alt="المشروع الأول">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">مشروع توبة</h3>   
+                        <p class="project-description">موقع يساعد المسلمين على التوبة</p>
+                        <div class="project-footer">
+                            <span>قيد التطوير</span>
+                            <a href="https://youtu.be/jNLdV9vCPiA?si=h5YloiBYpASG-G3h" target="_blank" class="project-link">مشاهدة على يوتيوب</a>
+                            <a href="#" target="_blank" class="project-link">زيارة الموقع</a>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- المشروع 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="thumbnail (8).jpeg" alt="المشروع الثاني">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">مونتاج فيديو ليوتيوبر</h3>
+                        <p class="project-description">وصف</p>
+                        <div class="project-footer">
+                            <span>تاريخ الانتهاء : 2025</span>
+                            <a href="https://youtu.be/zf5GcGxL7Mc?si=xdom42u_gRmQjyQG" target="_blank" class="project-link">مشاهدة الفيديو</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المشروع 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="thumbnail (9).jpeg" alt="المشروع الثالث">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">لعبة Platformer 2D</h3>
+                        <p class="project-description">لعبة ثنائية الأبعاد تم تطويرها باستخدام محرك Godot</p>
+                        <div class="project-footer">
+                            <span>تاريخ الإطلاق: 2025</span>
+                            <a href="https://zaid-programmer.itch.io/noname-game" target="_blank" class="project-link">تنزيل المشروع</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المشروع 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="thumbnail (10).jpeg" alt="المشروع الرابع">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">كورس تطوير العاب للمبتدئين</h3>
+                        <p class="project-description">كورس تطوير العاب للمبتدئين بالتعاون مع اكادمية حاسوب</p>
+                        <div class="project-footer">
+                            <span>تاريخ الانتهاء : 2024</span>
+                            <a href="https://youtu.be/TA-2RnbmR3U?si=rRhAGAIH4d4-GX1H" target="_blank" class="project-link">مشاهدة الكورس</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المشروع 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="thumbnail (11).jpeg" alt="المشروع الخامس">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">فيديو يشرح لغة Gdscript</h3>
+                        <p class="project-description">فيديو بسيط يشرح لغة Gdscript بالتعاون مع اكادمية حاسوب</p>
+                        <div class="project-footer">
+                            <span>تاريخ الانتهاء : 2024</span>
+                            <a href="https://youtu.be/T3_qtdDvphw?si=WjsGsxLnPIvBuse6" target="_blank" class="project-link">مشاهدة الفيديو</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المشروع 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="thumbnail (12).jpeg" alt="المشروع السادس">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">كورس تعليمي لمجال تطوير الالعاب</h3>
+                        <p class="project-description">كورس كامل يشرح اساسيات تطوير الالعاب بابسط طريقة</p>
+                        <div class="project-footer">
+                            <span>تاريخ الانتهاء : 2024</span>
+                            <a href="https://youtu.be/8pl_Cn2VnVs?si=6T-qjvtXU5urCcYi" target="_blank" class="project-link">مشاهدة الكورس</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Untitled-4.png" alt="المشروع السابع">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">موقع ويب</h3>
+                        <p class="project-description">موقع ويب للشراء والبيع</p>
+                        <div class="project-footer">
+                            <span>تاريخ الانتهاء : ????</span>
+                            <a href="https://youtu.be/8pl_Cn2VnVs?si=6T-qjvtXU5urCcYi" target="_blank" class="project-link">الانتقال الى الكود</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الشهادات الجديد -->
+    <section class="certificates-section hidden">
+        <div class="certificates-wrapper">
+            <h2 class="section-title" style="color: #2c3e50;">شهاداتي</h2>
+            <div class="certificates-grid">
+                <!-- الشهادة 1 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="certificate1.jpg" alt="شهادة تطوير الويب">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">شهادة تطوير الويب</h3>
+                        <p class="certificate-description">منصة Coursera - 2023</p>
+                    </div>
+                </div>
+                
+                <!-- الشهادة 2 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="certificate2.jpg" alt="شهادة JavaScript متقدمة">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">شهادة JavaScript متقدمة</h3>
+                        <p class="certificate-description">منصة Udemy - 2024</p>
+                    </div>
+                </div>
+                
+                <!-- الشهادة 3 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="certificate3.jpg" alt="شهادة تطوير الألعاب">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">شهادة تطوير الألعاب</h3>
+                        <p class="certificate-description">أكاديمية حاسوب - 2024</p>
+                    </div>
+                </div>
+                
+                <!-- الشهادة 4 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="certificate4.jpg" alt="شهادة Python">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">شهادة Python</h3>
+                        <p class="certificate-description">منصة Udacity - 2023</p>
+                    </div>
+                </div>
+                
+                <!-- الشهادة 5 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="certificate5.jpg" alt="شهادة تصميم الفيديو">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">شهادة تصميم الفيديو</h3>
+                        <p class="certificate-description">منصة Skillshare - 2022</p>
+                    </div>
+                </div>
+                
+                <!-- الشهادة 6 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="certificate6.jpg" alt="شهادة Godot Engine">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">شهادة Godot Engine</h3>
+                        <p class="certificate-description">منصة GDQuest - 2023</p>
                     </div>
                 </div>
             </div>
